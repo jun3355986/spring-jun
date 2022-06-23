@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.jun.com/schema/ilovesh"
+        xmlns:tns="http://www.jun.com/schema/ilovesh"
+        elementFormDefault="qualified">
+    <element name="shhui">
+        <complexType>
+            <attribute name ="name" type = "string"/>
+            <attribute name ="job" type = "string"/>
+            <attribute name ="faceScore" type = "int"/>
+            <attribute name ="doForHer" type="string"/>
+        </complexType>
+    </element>
+</schema>
