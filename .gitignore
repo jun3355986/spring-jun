@@ -2,5 +2,4 @@
 */out
 .gradle
 .idea
-/buildSrc
 .DS_Store
