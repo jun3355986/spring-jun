@@ -2,6 +2,7 @@ package com.mashibing;
 
 import com.mashibing.cycle.A;
 import com.mashibing.cycle.B;
+import com.mashibing.selfEditor.SaySomeThing;
 import com.mashibing.selftag.ShaohuiInfo;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -59,10 +60,10 @@ public class Test {
 //        A a = new A();
 //        B b = new B();
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("test.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("HahaEditor.xml");
 //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("tx.xml");
-        ShaohuiInfo sh = context.getBean(ShaohuiInfo.class);
-        System.out.println("info: " + sh);
+        SaySomeThing saySomeThing = context.getBean(SaySomeThing.class);
+        System.out.println("info: " + saySomeThing);
 //        Student bean = context.getBean(Student.class);
         context.close();
 

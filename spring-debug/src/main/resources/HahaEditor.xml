@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="haLiRong" class="com.mashibing.selfEditor.SaySomeThing">
+        <property name="whoSaying" value="junjunjun"></property>
+        <property name="saying" value="noReason|2022-6-26 01:22:20|90"></property>
+    </bean>
+<!--    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+<!--        <property name="customEditors">-->
+<!--            <map>-->
+<!--                <entry key="com.mashibing.selfEditor.Haha">-->
+<!--                    <value>com.mashibing.selfEditor.HahaPropertyEditor</value>-->
+<!--                </entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <bean class="com.mashibing.selfEditor.HahaPropertyEditorRegistrar"></bean>
+            </list>
+        </property>
+    </bean>
+</beans>
